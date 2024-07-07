@@ -1,0 +1,36 @@
+# ground truth are mapped to their closest equivalent
+learning_map:
+  0: 0
+  1: 0
+  101: 1
+  102: 2
+  103: 3
+  104: 3
+  105: 1
+  106: 4
+  107: 5
+  108: 0
+  109: 6
+  110: 7
+  111: 8
+  112: 9
+  116: 10
+  117: 11
+  118: 0
+  119: 12
+  120: 13
+  121: 14
+  122: 0
+  200: 0
+  201: 0
+  202: 0
+  203: 0
+  204: 3
+
+split: # sequence numbers 1/2/3 train/val/test
+  train:
+    - 1
+  valid:
+    - 2
+  test:
+    - 3
