@@ -21,7 +21,7 @@ Comparison of cumulative point clouds:
 We used an industrial robot (equipped with Livox Mid-360) to collect a total of 38904 frames of **hybrid-solid LiDAR** data in different substations. 
 We annotated 25 categories under professional guidance and merged them into 14 classes for single-frame segmentation task. 
 
-Examples of labeled cumulative point clouds in [S.MID](https://smid):
+Examples of labeled cumulative point clouds in [S.MID](https://www.semanticindustry.top):
 ![image](Figs/SMID.jpg)
 
 The S.MID dataset is published under CC BY-NC-SA 4.0 license, which means that anyone can use this dataset for non-commercial research purposes.
@@ -81,7 +81,7 @@ Download our dataset from **[\[S.MID\]](https://www.semanticindustry.top/)**.
   - [x] S.MID
   - [ ] nuScenes
   - [ ] SemanticKITTI
-- [ ] Releaase code of training
+- [ ] Release code of training
 - [ ] Release ROS tools
 ## 5. Acknowledgements
 We would like to thank all the pioneers [SemanticKITTI](https://github.com/PRBonn/semantic-kitti-api), [FocalNet](https://github.com/microsoft/FocalNet), [SphereFormer](https://github.com/dvlab-research/SphereFormer/tree/master), [Cylinder3D](https://github.com/xinge008/Cylinder3D) and [nuScenes](https://github.com/nutonomy/nuscenes-devkit). 
