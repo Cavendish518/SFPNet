@@ -1,13 +1,13 @@
 # SFPNet: Sparse Focal Point Network for Semantic Segmentation on General LiDAR Point Clouds 
 
-This repo is the official project repository of the paper **[\[SFPNet\]](https://arxiv.org/pdf.pdf)** (ECCV 2024) and dataset **[\[S.MID\]](https://www.semanticindustry.top)**.
+This repo is the official project repository of the paper **[\[SFPNet\]](http://arxiv.org/abs/2407.11569)** (ECCV 2024) and dataset **[\[S.MID\]](https://www.semanticindustry.top)**.
 
 ## 1. Overview
 **SFPNet**: 
 For the backbone of **LiDAR** segmentation task, the three main challenges it needs to address are **sparsity**, **large scale**, and **non-uniform changes in point cloud density**. 
 Previous works introduced inductive bias (special partition or special window and position encoding) to a single type of LiDAR (usually mechanical spinning LiDAR) to solve the 
 above three challenges . This can limit model **generalizability** to other kinds of LiDAR and make hyperparameter tuning more complex.
- Therefore, we propose the pipeline SFPNet with favorable properties (See more in our  [paper](https://arxiv.org/pdf.pdf)) to address the three main challenges in various type of LiDAR
+ Therefore, we propose the pipeline SFPNet with favorable properties (See more in our  [paper](http://arxiv.org/abs/2407.11569)) to address the three main challenges in various type of LiDAR
   point cloud data while avoiding the introduction of special inductive bias. Our core module SFPM can replace window transformer block.
 
 Comparison of field of view:
@@ -21,7 +21,7 @@ Comparison of cumulative point clouds:
 We used an industrial robot (equipped with Livox Mid-360) to collect a total of 38904 frames of **hybrid-solid LiDAR** data in different substations. 
 We annotated 25 categories under professional guidance and merged them into 14 classes for single-frame segmentation task. 
 
-Examples of labeled cumulative point clouds in [S.MID](https://www.semanticindustry.top):
+Examples of labeled cumulative point clouds in [S.MID](https://www.semanticindustry.top/dataset):
 ![image](Figs/SMID.jpg)
 
 The S.MID dataset is published under CC BY-NC-SA 4.0 license, which means that anyone can use this dataset for non-commercial research purposes.
@@ -56,10 +56,10 @@ python demo_SMID.py --config config/demo/Mid_demo.yaml
 
 | dataset                                                                      |        Val mIoU (tta)         |         Download          |
 |------------------------------------------------------------------------------|:-----------------------------:|:-------------------------:|
-| SMID                                                                         |     73.4  (demo version)      | [S.MID Weight1](https://drive.google.com/file/d/1vrLca270ZrT7zDAiwE_9cMffiGse4qIl/view?usp=sharing) |
-| SMID | 71.9 (original paper version) |       S.MID Weight2       |
-| nuScenes |             80.1              |      nuScenes Weight      |
-| SemanticKITTI |             69.2              |   SemanticKITTI Weight    |
+| S.MID                                                                         |     73.4  (demo version)      | [S.MID Weight1](https://drive.google.com/file/d/1vrLca270ZrT7zDAiwE_9cMffiGse4qIl/view?usp=sharing) |
+| S.MID | 71.9 (original paper version) |       [S.MID Weight2](https://drive.google.com/file/d/1hvTmEdBdYSe-Rjgc-S9et9P5F5XdAB56/view?usp=sharing)       |
+| nuScenes |             80.1              |      [nuScenes Weight](https://drive.google.com/file/d/1ovEpw6_1km28FM_YmHGwbs0ShUVraL4t/view?usp=sharing)      |
+| SemanticKITTI |             69.2              |   [SemanticKITTI Weight](https://drive.google.com/file/d/1xoXseXGDKtNC4dm2axb_8u9rxzNS1Qe_/view?usp=sharing)    |
 
 ###  2.3 ROS Tools
 To facilitate the use of LiDAR semantic segmentation in downstream tasks, we provide ROS tools.
@@ -70,19 +70,19 @@ Please note that our work focuses on the representational capabilities of the ne
  weights. If you are willing to make the model weights and codes public, please contact us.
 
 ## 3. SeMantic InDustry 
-Download our dataset from **[\[S.MID\]](https://www.semanticindustry.top/)**.
+Download our dataset from **[\[S.MID\]](https://www.semanticindustry.top/download)**.
 
 ## 4. Task list
 - [x] Release model code of SFPNet;
 - [x] Release S.MID and instruction in our dataset webpage;
 - [x] Release code of Demo (validation);
-- [ ] Release dataset tools
-- [ ] Release model weights;
+- [ ] Release dataset tools;
+- [x] Release model weights;
   - [x] S.MID
-  - [ ] nuScenes
-  - [ ] SemanticKITTI
-- [ ] Release code of training
-- [ ] Release ROS tools
+  - [x] nuScenes
+  - [x] SemanticKITTI
+- [ ] Release code of training;
+- [ ] Release ROS tools.
 ## 5. Acknowledgements
 We would like to thank all the pioneers [SemanticKITTI](https://github.com/PRBonn/semantic-kitti-api), [FocalNet](https://github.com/microsoft/FocalNet), [SphereFormer](https://github.com/dvlab-research/SphereFormer/tree/master), [Cylinder3D](https://github.com/xinge008/Cylinder3D) and [nuScenes](https://github.com/nutonomy/nuscenes-devkit). 
 
