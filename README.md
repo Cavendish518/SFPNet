@@ -56,8 +56,8 @@ python demo_SMID.py --config config/demo/Mid_demo.yaml
 
 | dataset                                                                      |        Val mIoU (tta)         |         Download          |
 |------------------------------------------------------------------------------|:-----------------------------:|:-------------------------:|
-| S.MID                                                                         |     73.4  (demo version)      | [S.MID Weight1](https://drive.google.com/file/d/1vrLca270ZrT7zDAiwE_9cMffiGse4qIl/view?usp=sharing) |
-| S.MID | 71.9 (original paper version) |       [S.MID Weight2](https://drive.google.com/file/d/1hvTmEdBdYSe-Rjgc-S9et9P5F5XdAB56/view?usp=sharing)       |
+| S.MID_beta_v1.2                                                              |     73.4  (demo version)      | [S.MID Weight1](https://drive.google.com/file/d/1vrLca270ZrT7zDAiwE_9cMffiGse4qIl/view?usp=sharing) |
+| S.MID_beta_v1.2 | 71.9 (original paper version) |       [S.MID Weight2](https://drive.google.com/file/d/1hvTmEdBdYSe-Rjgc-S9et9P5F5XdAB56/view?usp=sharing)       |
 | nuScenes |             80.1              |      [nuScenes Weight](https://drive.google.com/file/d/1ovEpw6_1km28FM_YmHGwbs0ShUVraL4t/view?usp=sharing)      |
 | SemanticKITTI |             69.2              |   [SemanticKITTI Weight](https://drive.google.com/file/d/1xoXseXGDKtNC4dm2axb_8u9rxzNS1Qe_/view?usp=sharing)    |
 
@@ -70,7 +70,16 @@ Please note that our work focuses on the representational capabilities of the ne
  weights. If you are willing to make the model weights and codes public, please contact us.
 
 ## 3. SeMantic InDustry 
-Download our dataset from **[\[S.MID\]](https://www.semanticindustry.top/download)**.
+Download S.MID beta version 1.2 from **[\[S.MID\]](https://www.semanticindustry.top/download)**. Details about dataset can be found in the [webpage](https://www.semanticindustry.top) and our [paper](http://arxiv.org/abs/2407.11569). 
+An optimized and denoised version(v1.3) is coming soon.
+
+For constructing the code for dataloader, you can refer to the implementation in the demo.
+
+Additional dependencies for dataset tools.
+```
+pip install matplotlib
+pip install open3d
+```
 
 ## 4. Task list
 - [x] Release model code of SFPNet;
@@ -89,5 +98,10 @@ We would like to thank all the pioneers [SemanticKITTI](https://github.com/PRBon
 ## 6. Citation
 If your like our paper, codes or dataset, please cite us and give this repo a star.
 ```
-
+@article{wang2024sfpnet,
+  title={SFPNet: Sparse Focal Point Network for Semantic Segmentation on General LiDAR Point Clouds},
+  author={Wang, Yanbo and Zhao, Wentao and Cao, Chuan and Deng, Tianchen and Wang, Jingchuan and Chen, Weidong},
+  journal={arXiv preprint arXiv:2407.11569},
+  year={2024}
+}
 ```
