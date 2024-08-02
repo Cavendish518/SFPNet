@@ -45,7 +45,7 @@ pip install torch_sparse==0.6.12 cumm-cu114==0.2.8 torch_cluster==1.5.9
 pip install tensorboard timm termcolor tensorboardX
 pip install numpy==1.25.0
 ```
-
+Note: The versions of some libraries are not very strict and can be adjusted according to the requirements file.
 ### 2.2 Quick Demo
 **Demo for S.MID**:
 ```
