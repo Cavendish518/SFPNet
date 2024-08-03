@@ -54,12 +54,12 @@ python demo_SMID.py --config config/demo/Mid_demo.yaml
 
 **Model weights library**
 
-| dataset                                                                      |        Val mIoU (tta)         |         Download          |
-|------------------------------------------------------------------------------|:-----------------------------:|:-------------------------:|
-| S.MID_beta_v1.2                                                              |     73.4  (demo version)      | [S.MID Weight1](https://drive.google.com/file/d/1vrLca270ZrT7zDAiwE_9cMffiGse4qIl/view?usp=sharing) |
-| S.MID_beta_v1.2 | 71.9 (original paper version) |       [S.MID Weight2](https://drive.google.com/file/d/1hvTmEdBdYSe-Rjgc-S9et9P5F5XdAB56/view?usp=sharing)       |
-| nuScenes |             80.1              |      [nuScenes Weight](https://drive.google.com/file/d/1ovEpw6_1km28FM_YmHGwbs0ShUVraL4t/view?usp=sharing)      |
-| SemanticKITTI |             69.2              |   [SemanticKITTI Weight](https://drive.google.com/file/d/1xoXseXGDKtNC4dm2axb_8u9rxzNS1Qe_/view?usp=sharing)    |
+| dataset         |        Val mIoU (tta)         |                                                  Download                                                  |
+|-----------------|:-----------------------------:|:----------------------------------------------------------------------------------------------------------:|
+| S.MID_v1.3      |       72.8  (baseline)        |    [S.MID baseline](https://drive.google.com/file/d/1vn2-Uew3W7c7jZB-dDxgzw7w-VruW7bi/view?usp=sharing)    |
+| S.MID_beta_v1.2 | 71.9 (original paper version) |    [S.MID Weight2](https://drive.google.com/file/d/1hvTmEdBdYSe-Rjgc-S9et9P5F5XdAB56/view?usp=sharing)     |
+| nuScenes        |             80.1              |   [nuScenes Weight](https://drive.google.com/file/d/1ovEpw6_1km28FM_YmHGwbs0ShUVraL4t/view?usp=sharing)    |
+| SemanticKITTI   |             69.2              | [SemanticKITTI Weight](https://drive.google.com/file/d/1xoXseXGDKtNC4dm2axb_8u9rxzNS1Qe_/view?usp=sharing) |
 
 ###  2.3 ROS Tools
 To facilitate the use of LiDAR semantic segmentation in downstream tasks, we provide ROS tools.
@@ -70,8 +70,8 @@ Please note that our work focuses on the representational capabilities of the ne
  weights. If you are willing to make the model weights and codes public, please contact us.
 
 ## 3. SeMantic InDustry 
-Download S.MID beta version 1.2 from **[\[S.MID\]](https://www.semanticindustry.top/download)**. Details about dataset can be found in the [webpage](https://www.semanticindustry.top) and our [paper](http://arxiv.org/abs/2407.11569). 
-An optimized and denoised version(v1.3) is coming soon.
+Download S.MID from **[\[S.MID\]](https://www.semanticindustry.top/download)**. Details about dataset can be found in the [webpage](https://www.semanticindustry.top) and our [paper](http://arxiv.org/abs/2407.11569). 
+An optimized and denoised version v1.3 has been released (see [issue#1](https://github.com/Cavendish518/SFPNet/issues/1)).
 
 For constructing the code for dataloader, you can refer to the implementation in the demo.
 
@@ -80,12 +80,27 @@ Additional dependencies for dataset tools.
 pip install matplotlib
 pip install open3d
 ```
-
+Statistics of label distribution.
+```
+python Mid_label_distribution.py /path_to_dataset/SMID_v1_3/sequences/01
+```
+Visualization of ground truth (single frame).
+```
+python Mid_vis_cloud.py --vis_type ground_truth --pt_path /path_to_dataset/SMID_v1_3/sequences/01/hybrid/001000.bin --gt_path /path_to_dataset/SMID_v1_3/sequences/01/labels/001000.label
+```
+Visualization of prediction (your prediction in ground truth format). You can modify the code to fit your storage format.
+```
+python Mid_vis_cloud.py --vis_type prediction --pt_path /path_to_dataset/SMID_v1_3/sequences/01/hybrid/001000.bin --pd_path /path_to_prediction/001000.label
+```
+Visualization of difference (your prediction in ground truth format). You can modify the parameters for better view.
+```
+python Mid_vis_cloud.py --vis_type prediction --pt_path /path_to_dataset/SMID_v1_3/sequences/01/hybrid/001000.bin --gt_path /path_to_dataset/SMID_v1_3/sequences/01/labels/001000.label --pd_path /path_to_prediction/001000.label
+```
 ## 4. Task list
 - [x] Release model code of SFPNet;
 - [x] Release S.MID and instruction in our dataset webpage;
 - [x] Release code of Demo (validation);
-- [ ] Release dataset tools;
+- [x] Release dataset tools;
 - [x] Release model weights;
   - [x] S.MID
   - [x] nuScenes
