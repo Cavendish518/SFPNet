@@ -26,6 +26,7 @@ Examples of labeled cumulative point clouds in [S.MID](https://www.semanticindus
 
 The S.MID dataset is published under CC BY-NC-SA 4.0 license, which means that anyone can use this dataset for non-commercial research purposes.
 
+You can quickly get an overview of our work through a short [video](https://www.youtube.com/watch?v=3AA-p0JUuxk).
 ## 2. SFPNet
 
 ### 2.1 Environment
