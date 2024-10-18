@@ -57,7 +57,7 @@ python demo_SMID.py --config config/demo/Mid_demo.yaml
 
 | dataset         |        Val mIoU (tta)         |                                                  Download                                                  |
 |-----------------|:-----------------------------:|:----------------------------------------------------------------------------------------------------------:|
-| S.MID_v1.3      |       72.8  (baseline)        |    [S.MID baseline](https://drive.google.com/file/d/1vn2-Uew3W7c7jZB-dDxgzw7w-VruW7bi/view?usp=sharing)    |
+| S.MID_v1.3      |       72.8  (new baseline)        |    [S.MID baseline](https://drive.google.com/file/d/1vn2-Uew3W7c7jZB-dDxgzw7w-VruW7bi/view?usp=sharing)    |
 | S.MID_beta_v1.2 | 71.9 (original paper version) |    [S.MID Weight2](https://drive.google.com/file/d/1hvTmEdBdYSe-Rjgc-S9et9P5F5XdAB56/view?usp=sharing)     |
 | nuScenes        |             80.1              |   [nuScenes Weight](https://drive.google.com/file/d/1ovEpw6_1km28FM_YmHGwbs0ShUVraL4t/view?usp=sharing)    |
 | SemanticKITTI   |             69.2              | [SemanticKITTI Weight](https://drive.google.com/file/d/1xoXseXGDKtNC4dm2axb_8u9rxzNS1Qe_/view?usp=sharing) |
