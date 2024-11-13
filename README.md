@@ -95,7 +95,7 @@ python Mid_vis_cloud.py --vis_type prediction --pt_path /path_to_dataset/SMID_v1
 ```
 Visualization of difference (your prediction in ground truth format). You can modify the parameters for better view.
 ```
-python Mid_vis_cloud.py --vis_type prediction --pt_path /path_to_dataset/SMID_v1_3/sequences/01/hybrid/001000.bin --gt_path /path_to_dataset/SMID_v1_3/sequences/01/labels/001000.label --pd_path /path_to_prediction/001000.label
+python Mid_vis_cloud.py --vis_type difference --pt_path /path_to_dataset/SMID_v1_3/sequences/01/hybrid/001000.bin --gt_path /path_to_dataset/SMID_v1_3/sequences/01/labels/001000.label --pd_path /path_to_prediction/001000.label
 ```
 ## 4. Task list
 - [x] Release model code of SFPNet;
