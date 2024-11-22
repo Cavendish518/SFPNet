@@ -62,6 +62,8 @@ python demo_SMID.py --config config/demo/Mid_demo.yaml
 | nuScenes        |             80.1              |   [nuScenes Weight](https://drive.google.com/file/d/1ovEpw6_1km28FM_YmHGwbs0ShUVraL4t/view?usp=sharing)    |
 | SemanticKITTI   |             69.2              | [SemanticKITTI Weight](https://drive.google.com/file/d/1xoXseXGDKtNC4dm2axb_8u9rxzNS1Qe_/view?usp=sharing) |
 
+If your are using a newer GPU, please refer to [issue#4](https://github.com/Cavendish518/SFPNet/issues/4).
+
 ###  2.3 ROS Tools
 To facilitate the use of LiDAR semantic segmentation in downstream tasks, we provide ROS tools.
 
