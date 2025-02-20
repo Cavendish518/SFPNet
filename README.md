@@ -116,12 +116,12 @@ We would like to thank all the pioneers [SemanticKITTI](https://github.com/PRBon
 ## 6. Citation
 If your like our paper, codes or dataset, please cite us and give this repo a star.
 ```
-@inproceedings{wang2025sfpnet,
+@inproceedings{wang2024sfpnet,
   title={Sfpnet: Sparse focal point network for semantic segmentation on general lidar point clouds},
   author={Wang, Yanbo and Zhao, Wentao and Cao, Chuan and Deng, Tianchen and Wang, Jingchuan and Chen, Weidong},
   booktitle={European Conference on Computer Vision},
   pages={403--421},
-  year={2025},
+  year={2024},
   organization={Springer}
 }
 ```
