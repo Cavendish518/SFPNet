@@ -99,17 +99,7 @@ Visualization of difference (your prediction in ground truth format). You can mo
 ```
 python Mid_vis_cloud.py --vis_type difference --pt_path /path_to_dataset/SMID_v1_3/sequences/01/hybrid/001000.bin --gt_path /path_to_dataset/SMID_v1_3/sequences/01/labels/001000.label --pd_path /path_to_prediction/001000.label
 ```
-## 4. Task list
-- [x] Release model code of SFPNet;
-- [x] Release S.MID and instruction in our dataset webpage;
-- [x] Release code of Demo (validation);
-- [x] Release dataset tools;
-- [x] Release model weights;
-  - [x] S.MID
-  - [x] nuScenes
-  - [x] SemanticKITTI
-- [ ] Release code of training;
-- [ ] Release ROS tools.
+
 ## 5. Acknowledgements
 We would like to thank all the pioneers [SemanticKITTI](https://github.com/PRBonn/semantic-kitti-api), [FocalNet](https://github.com/microsoft/FocalNet), [SphereFormer](https://github.com/dvlab-research/SphereFormer/tree/master), [Cylinder3D](https://github.com/xinge008/Cylinder3D) and [nuScenes](https://github.com/nutonomy/nuscenes-devkit). 
 
